@@ -20,8 +20,22 @@ function Site() {
               </div>
               <h3 className="title">{site.title}</h3>
               <div className="btn">
-                <a href={site.gitHub}>gitHub</a>
-                <a href={site.view}>view</a>
+                <a
+                  href={site.gitHub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontWeight: "bold", paddingRight: 10 }}
+                >
+                  gitHub
+                </a>
+                <a
+                  href={site.view}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontWeight: "bold" }}
+                >
+                  view
+                </a>
               </div>
               <div className="info">
                 <span>{site.info[0]}</span>

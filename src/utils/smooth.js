@@ -1,4 +1,4 @@
-import Lenis from '@studio-freight/lenis';
+import Lenis from "@studio-freight/lenis";
 
 const lenis = () => {
   const lenis = new Lenis({
@@ -13,7 +13,7 @@ const lenis = () => {
 
   requestAnimationFrame(raf);
 
-  lenis.on('scroll', (e) => {
+  lenis.on("scroll", (e) => {
     console.log(e);
   });
 };

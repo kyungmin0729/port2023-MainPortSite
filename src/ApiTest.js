@@ -3,7 +3,7 @@ const axios = require("axios");
 
 class App extends Component {
   state = {
-    response: "/",
+    response: "",
   };
 
   //페이지 로드시 실행 GET TEST

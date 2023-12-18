@@ -34,7 +34,7 @@
   }
   .site__wrap {
     .site__item {
-      height: 70vh;
+      height: 80vh;
       @include flex-center;
       flex-direction: column;
       position: sticky;
@@ -129,7 +129,7 @@
           text-decoration: underline;
           text-transform: uppercase;
           color: var(--black200);
-          font-size: 1rem;
+          font-size: 2rem;
           transition: all 0.3s;
           margin: 0 2px;
 

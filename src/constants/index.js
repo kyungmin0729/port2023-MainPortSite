@@ -4,11 +4,7 @@ export const headerNav = [
     url: "#intro",
   },
   {
-    title: "skill",
-    url: "#skill",
-  },
-  {
-    title: "site",
+    title: "portfolio",
     url: "#site",
   },
   {
@@ -26,7 +22,8 @@ export const siteText = [
   {
     text: ["portfolio Main Site"],
     title: "portFolio2023",
-    gitHub: "https://github.com/kyungmin0729/port2023-MainPortSite",
+    gitHub:
+      "https://github.com/kyungmin0729/port2023-MainPortSite/tree/master/src",
     view: "/",
     info: [],
   },
