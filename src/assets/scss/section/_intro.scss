@@ -1,10 +1,11 @@
 #intro {
-  height: 620vh;
+  height: 100&;
 }
 .intro__inner {
   width: 100%;
 
   @media (max-width: 800px) {
+    padding-top: 40px;
     justify-content: center;
   }
 
