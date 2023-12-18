@@ -26,7 +26,7 @@ export const siteText = [
   {
     text: ["portfolio Main Site"],
     title: "portFolio2023",
-    gitHub: "https://github.com/kyungmin0729/port2023-react",
+    gitHub: "https://github.com/kyungmin0729/port2023-MainPortSite",
     view: "/",
     info: [],
   },
