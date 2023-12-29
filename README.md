@@ -14,6 +14,10 @@
 
 ### Server
 
+#### Server 구성도
+
+  <img width="1920" alt="Server 구성도" src="./src/assets/2.png">
+
 - express는 Node.js 기반의 웹 프레임워크로, 웹 애플리케이션 및 API를 개발하기 위해 사용됩니다.
 - nodemon는 개발 시 자동 재시작을 제공하는 도구입니다.
 - concurrently는 서버와 클라이언트를 동시에 실행할 수 있도록 도와줍니다.
@@ -23,6 +27,10 @@
 * 학습 : CORS는 왜 발생 하는가? 요청을 보내는 클라이언트 서버와 요청을 받는 서버의 도메인이 다를 때 생기는 문제
 
 ### Client
+
+#### 구성도
+
+  <img width="1920" alt="Client 구성도" src="./src/assets/1.png">
 
 - HTML, CSS 기반으로 웹사이트의 기본 레이아웃 설계하고, 웹 표준 및 웹 접근성을 준수하여 작업합니다.
 - react를 사용하여 사이트를 번들링하고 관리합니다.
@@ -39,6 +47,10 @@
 - eslint-config-prettier를 설치하여 rule이 겹치는 충돌을 막습니다.
 
 ## 프로젝트 실행
+
+### 배포 구성도
+
+  <img width="1920" alt="배포 구성도" src="./src/assets/3.png">
 
 ### (중요) 개발환경 초기설정
 
