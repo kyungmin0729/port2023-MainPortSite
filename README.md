@@ -14,7 +14,7 @@
 
 ### Server
 
-#### Server 구성도
+#### 구성도
 
   <img width="1920" alt="Server 구성도" src="./src/assets/2.png">
 
