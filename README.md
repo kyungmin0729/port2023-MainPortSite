@@ -4,11 +4,18 @@
 
 ## 프로젝트 개요
 
+### 결론
+
+**필자는 Express.js를 이용하여 proxy로 서버를 구축하려고 했으나 좀 더 학습이 필요하여 국비 강사님에게 도움을 요청하여 사이트를 구축함**
+
+### 나의 계획
+
 - Server단(express)과 Client단(react.js)으로 사이트 구성
 - proxy로 클라이언트와 API 서버 간의 인터페이스 형성
 - axios로 요청, 응답 처리
 - eslint, prettier를 이용하여 버그를 분석하여 해결하고 질 좋은 코드를 작성
-- node.js 형식으로 cafe24 호스팅 배포
+- node.js 형식으로 cafe24 호스팅 배포  
+  **React로 배포시 일반적으로 외부 API를 이용하여 배포함**
 
 ## 기술 스택
 
@@ -24,7 +31,8 @@
 - proxy는 CORS 에러를 해결하여 클라이언트에 보다 안정적인 인터페이스를 제공할 수 있습니다.
 - http-proxy-middleware는 HTTP 요청을 프록시 서버로 전달하고 응답을 받을 수 있습니다.
 
-* 학습 : CORS는 왜 발생 하는가? 요청을 보내는 클라이언트 서버와 요청을 받는 서버의 도메인이 다를 때 생기는 문제
+* 학습 : CORS는 왜 발생 하는가?  
+  ` 요청을 보내는 클라이언트 서버와 요청을 받는 서버의 도메인이 다를 때 생기는 문제`
 
 ### Client
 
@@ -52,72 +60,7 @@
 
   <img width="1920" alt="배포 구성도" src="./src/assets/3.png">
 
-### (중요) 개발환경 초기설정
-
-- Express-generator는 Express환경을 간단하게 구축해줍니다.  
-  `npm install -g express-generator`
-- Express App 생성과 폴더 이름을 지정합니다.  
-  `$ express server && cd server`
-- install을 하고 앱을 실행합니다.
-  `npm install`  
-  `npm start`
-- 클라이언트 폴더로 이름을 지정하고 리액트 프로젝트 개발 환경을 구축합니다.  
-  `npx create-react-app client`
-- client .json 파일에 port를 지정합니다.  
-  `"scripts": {`  
-  `  "start": "set PORT=3000 && react-scripts start",`
-- express 폴더에 있는 bin폴더의 www파일에서 파일명과 포트번호를 변경합니다. (카페24 web.js를 인식, 포트번호는 8001)  
-  `var app = require("../web");`  
-  `var port = normalizePort(process.env.PORT || '8001');`
-- Express API 와 React 클라이언트 연결합니다.
-- client 프로젝트에서 .json 파일을 열어서 프록시를 설정합니다.  
-  ` },`  
-   `"proxy": {`  
-   `"/api": {`  
-   `"target": "https://iniapi.inicis.com/localhost8001"`  
-   `},`  
-   `"/apis": {`  
-  `"target": "https://inirt.inicis.com/localhost3000"`  
-  `}`  
-  `},`  
-  `"eslintConfig": {`
-- client 프로젝트에서 http-proxy-middleware를 인스톨합니다.  
-  `npm install http-proxy-middleware`
-- client > scr > setupProxy.js 파일을 생성과 코드 작성을 합니다.  
-  `const { createProxyMiddleware } = require("http-proxy-middleware");`  
-  `module.exports = (app) => {`  
-  `app.use(`  
-  `createProxyMiddleware("/api/v1/refund", {`  
-  `// server`  
-  `target: "https://inirt.inicis.com/api/localhost:8001",`  
-  `changeOrigin: true,`  
-  `})`  
-  `);`  
-  `app.use(`  
-  `createProxyMiddleware("/apis/v1/rental/modify", {`  
-  `// client`  
-  `target: "https://inirt.inicis.com/apis/localhost:3000",`
-  `changeOrigin: true,`  
-  `})`
-- server 프로젝트에서 nodemon, concurrently를 설치합니다.  
-  `npm install nodemon concurrently`
-- server 프로젝트의 .json에 scripts 명령어를 넣습니다.  
-   `  "scripts": {`  
-   `"server": "nodemon web.js",` npm run server를 입력하면 nodemon web이 실행  
-   `"client": "npm start --prefix client",` npm run client를 입력하면 client폴더로 이동하여 npm start 실행  
-   `"start": "concurrently \"npm run server\" \"npm run client\""` npm run start를 입력하면 npm run server와 npm run client가 동시에 실행  
-  `},`
-- client 프로젝트에서 react-router-dom, axios를 설치합니다.  
-  `npm install --save react-router-dom axios`
-- App.jsx 파일에 axios 명령어를 입력합니다.  
-   `useEffect(() => {`  
-   `axios`  
-   `.get("/api/localhost:8001")` server의 web.js로 보냄  
-   `.then((response) => console.log(response.data));` server에서 돌아온 response를 콘솔창에 출력!  
-   `}, []);`
-  `
-- client 프로젝트에 redux를 설치합니다.  
-  `npm install --save react-redux`
+### (중요) 초기설정
 
 - 카페24 배포 git 초기설정 (node.js 호스팅)
 
@@ -126,8 +69,8 @@
 * id_rsa.pub를 열고 카페24에 키를 등록합니다.
 * 앱 생성하고 key 할당으로 앱에 키를 등록합니다.
 * git remote 순서 client -> server -> cafe24 -> port2023-mainsite
-* git 최상위 폴더에 하위폴더에 화살표 표시가 날 경우 -> 이유: 해당폴더에 .git 폴더가 생겨서 문제 발생
-* 해결: .git 파일제거 -> 스테이지 파일 제거 -> add, commit, push 진행
+* git 최상위 폴더에 하위폴더에 화살표 표시가 날 경우 -> 이유: 해당폴더에 .git 폴더가 생겨서 문제 발생  
+  `해결: .git 파일제거 -> 스테이지 파일 제거 -> add, commit, push 진행`
 * 문제가 발생하는 디렉토리에서 .git 파일제거  
   순서 (조회:ls -al -> 해당 파일 제거: rm -rf .git -> 확인: ls -al)
   `ls -al`  
@@ -148,27 +91,27 @@
 
 ### Server
 
-- express, nodemon, concurrently를 설치합니다.
+- express, nodemon, concurrently를 설치합니다.  
   `$ npm install nodemon concurrently`
-- http-proxy-middleware를 설치합니다.
+- http-proxy-middleware를 설치합니다.  
   `npm install --save http-proxy-middleware `
 
 ### Client
 
 - react-router-dom, sass, gsap, lenis를 설치합니다.  
   `npm install react-router-dom sass gsap @studio-freight/lenis`
-- axios를 설치합니다.
+- axios를 설치합니다.  
   `npm install axios`
-- http-proxy-middleware를 설치합니다.
+- http-proxy-middleware를 설치합니다.  
   `npm install --save-dev http-proxy-middleware`
 
 ### prettier, eslint
 
-- pretteier를 설치합니다.
+- pretteier를 설치합니다.  
   `npm install prettier --save-dev`
-- eslint를 설치합니다.
+- eslint를 설치합니다.  
   `npm install eslint --save-dev`
-- eslint-config-prettier를 설치합니다.
+- eslint-config-prettier를 설치합니다.  
   `npm install eslint-config-prettier --save-dev`
 - node_modules > eslint-plugin-jsx-ally > .eslintrc에 코드를 추가합니다.  
    `{
