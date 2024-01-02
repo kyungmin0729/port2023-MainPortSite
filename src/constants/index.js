@@ -35,13 +35,6 @@ export const siteText = [
     info: [],
   },
   {
-    text: ["Context API를 사용한 체크 리스트 프로그램"],
-    title: "todoList",
-    gitHub: "https://github.com/kyungmin0729/port2023-todo_FE",
-    view: "https://github.com/kyungmin0729/port2023-todo_FE/blob/master/README.md",
-    info: [],
-  },
-  {
     text: ["숙박 예약 기능 여행갈까 팀프로젝트"],
     title: "YeohaengGalkka-Project",
     gitHub: "https://github.com/kyungmin0729/port2023-TeamProject",
@@ -59,33 +52,18 @@ export const contactText = [
 
 export const footerText = [
   {
-    title: "portFolio2023",
-    desc: "포트폴리오 메인 사이트",
-    link: "https://github.com/kyungmin0729/port2023-react#readme",
+    title: "portfolio Main Site",
+    desc: "React.js를 활용한 사이트",
+    link: "https://github.com/kyungmin0729/port2023-MainPortSite/blob/master/README.md",
   },
   {
     title: "chatting",
     desc: "React(FE) + Spring boot(BE)를 활용한 채팅프로그램",
-    link: "https://github.com/kyungmin0729/port2023-chatting#readme",
+    link: "https://github.com/kyungmin0729/port2023-chatting/blob/master/README.md",
   },
   {
-    title: "board_BE",
-    desc: "Spring boot를 활용한 관리자 게시판 관리 프로그램",
-    link: "https://github.com/kyungmin0729/port2023-board_BE#readme",
-  },
-  {
-    title: "kanbanBoard_BE",
-    desc: "JSP를 활용한 회원 관리 및 게시글 등록/조회/수정/삭제 관리 프로그램",
-    link: "https://github.com/kyungmin0729/port2023-kanban_BE#readme",
-  },
-  {
-    title: "board_FE",
-    desc: "React.js를 활용한 로그인 및 회원가입 프로그램",
-    link: "https://github.com/kyungmin0729/port2023-board_FE#readme",
-  },
-  {
-    title: "todoList_FE",
-    desc: "Context API를 사용하여 전역 상태 관리를 활용한 체크 리스트 프로그램",
-    link: "https://github.com/kyungmin0729/port2023-todo_FE#readme",
+    title: "teamProject",
+    desc: "Springboot를 활용한 숙박 예약 기능 여행갈까 팀프로젝트",
+    link: "https://github.com/kyungmin0729/port2023-TeamProject/blob/master/README.md",
   },
 ];

@@ -28,7 +28,13 @@ function Footer() {
             <ul>
               {footerText.map((footer, key) => (
                 <li key={key}>
-                  <a href={footer.link}>{footer.title}</a>
+                  <a
+                    href={footer.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {footer.title}
+                  </a>
                   <em>{footer.desc}</em>
                 </li>
               ))}
