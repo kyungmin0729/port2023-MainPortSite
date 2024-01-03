@@ -22,8 +22,7 @@ export const siteText = [
   {
     text: ["portfolio Main Site"],
     title: "React + AWS",
-    gitHub:
-      "https://github.com/kyungmin0729/port2023-MainPortSite/tree/master/src",
+    gitHub: "https://github.com/kyungmin0729/port2023-MainPortSite",
     view: "https://github.com/kyungmin0729/port2023-MainPortSite/blob/master/README.md",
     info: [],
   },
