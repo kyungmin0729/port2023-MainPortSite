@@ -1,11 +1,5 @@
-# 프로젝트 명
-
-- 포트폴리오 메인 사이트
-
-## 프로젝트 개요
-
-- 보충 수업을 통해 새로운 기술을 배우고 역량과 경험을 효과적으로 향상시키기 위해 React를 활용하여 만든 사이트
-
-## 기술 스택
-
-- React, AWS
+<img width="1530" alt="설명1" src="./img/1.png">
+<img width="1530" alt="설명2" src="./img/2.png">
+<img width="1530" alt="설명3" src="./img/3.png">
+<img width="1530" alt="설명4" src="./img/4.png">
+<img width="1530" alt="설명5" src="./img/5.png">
