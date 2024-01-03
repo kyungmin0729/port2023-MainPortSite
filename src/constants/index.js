@@ -21,22 +21,22 @@ export const introText = {
 export const siteText = [
   {
     text: ["portfolio Main Site"],
-    title: "portFolio2023",
+    title: "React + AWS",
     gitHub:
       "https://github.com/kyungmin0729/port2023-MainPortSite/tree/master/src",
     view: "https://github.com/kyungmin0729/port2023-MainPortSite/blob/master/README.md",
     info: [],
   },
   {
-    text: ["React(FE) + Spring boot(BE)를 활용한 채팅프로그램"],
-    title: "chatting",
+    text: ["Chatting Program"],
+    title: "React(FE) + Springboot(BE)",
     gitHub: "https://github.com/kyungmin0729/port2023-chatting",
     view: "https://github.com/kyungmin0729/port2023-chatting/blob/master/README.md",
     info: [],
   },
   {
-    text: ["숙박 예약 기능 여행갈까 팀프로젝트"],
-    title: "YeohaengGalkka-Project",
+    text: ["Team Project"],
+    title: "Springboot",
     gitHub: "https://github.com/kyungmin0729/port2023-TeamProject",
     view: "https://github.com/kyungmin0729/port2023-TeamProject/blob/master/README.md",
     info: [],

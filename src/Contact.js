@@ -1,7 +1,6 @@
 import React from "react";
 import { NaverIcon } from "./Icon";
 import { contactText } from "./constants";
-
 const Contact = () => {
   return (
     <section id="contact">
