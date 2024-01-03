@@ -1,5 +1,4 @@
 import React from "react";
-import about3 from "./assets/img/3.png";
 import { footerText } from "./constants";
 
 function Footer() {
@@ -43,7 +42,6 @@ function Footer() {
         </div>
 
         <div className="footer__right">
-          <img src={about3} alt="포부" />
           &copy; portFolio2023
           <br />이 사이트는 React를 이용하여 제작하였습니다.
         </div>

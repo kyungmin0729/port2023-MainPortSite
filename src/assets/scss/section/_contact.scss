@@ -13,17 +13,18 @@
   @media (max-width: 800px) {
     justify-content: center;
   }
-  .contact__title {
-    font-size: 10vw;
-    text-transform: uppercase;
-    line-height: 0.8;
-    font-weight: 800;
-    white-space: nowrap;
-    text-indent: -0.5vw;
-    letter-spacing: -0.3vw;
+  .img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 650 px;
+    height: 800 px;
+    overflow: hidden;
 
-    @media (max-width: 800px) {
-      display: none;
+    @media (max-width: 320px) {
+      width: 20vh;
+      height: 20vh;
     }
   }
   .contact__text {

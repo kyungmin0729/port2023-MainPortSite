@@ -98,18 +98,4 @@
     font-size: 12px;
     margin-bottom: 20px;
   }
-  .img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 650 px;
-    height: 800 px;
-    overflow: hidden;
-
-    @media (max-width: 320px) {
-      width: 20vh;
-      height: 20vh;
-    }
-  }
 }
